@@ -10,8 +10,7 @@ var boats = [];
 
 var score = 0;
 
-var boatAnimation = [];
-var boatSpritedata, boatSpritesheet;
+//01. criar 3 matrizes necessárias para a nimação
 
 var brokenBoatAnimation = [];
 var brokenBoatSpritedata, brokenBoatSpritesheet;
@@ -23,8 +22,7 @@ function preload() {
   backgroundImg = loadImage("assets/background.gif");
   towerImage = loadImage("assets/tower.png");
 
-  boatSpritesheet = loadImage("assets/boat/boat.png");
-  boatSpritedata = loadJSON("assets/boat/boat.json");
+  //02. carregar sprite sheet e objeto JSON
 
   brokenBoatSpritesheet = loadImage("assets/boat/brokenBoat.png");
   brokenBoatSpritedata = loadJSON("assets/boat/brokenBoat.json");
@@ -50,9 +48,7 @@ function setup() {
 
   var boatFrames = boatSpritedata.frames;
   for (var i = 0; i < boatFrames.length; i++) {
-    var pos = boatFrames[i].position;
-    var img = boatSpritesheet.get(pos.x, pos.y, pos.w, pos.h);
-    boatAnimation.push(img);
+    //03. percorrer matrizes e salvar cada frame da animação em uma nova matriz
   }
 
   var brokenBoatFrames = brokenBoatSpritedata.frames;
