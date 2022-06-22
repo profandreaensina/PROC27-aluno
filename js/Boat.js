@@ -1,7 +1,7 @@
 class Boat {
   constructor(x, y, width, height, boatPos, boatAnimation) {
   
-    //04. criar nova proriedade animation e guardar boatAnimation nela
+    this.animation = boatAnimation;
     this.speed = 0.05;
     this.body = Bodies.rectangle(x, y, width, height);
     this.width = width;
@@ -39,7 +39,7 @@ class Boat {
     translate(pos.x, pos.y);
     rotate(angle);
     imageMode(CENTER);
-    image(/*05. adicionar animação */, 0, this.boatPosition, this.width, this.height);
+    image(this.animation[index], 0, this.boatPosition, this.width, this.height);
     pop();
   }
 }
