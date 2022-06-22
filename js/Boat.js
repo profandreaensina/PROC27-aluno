@@ -39,7 +39,7 @@ class Boat {
     translate(pos.x, pos.y);
     rotate(angle);
     imageMode(CENTER);
-    image(/* adicionar animação */, 0, this.boatPosition, this.width, this.height);
+    image(/*05. adicionar animação */, 0, this.boatPosition, this.width, this.height);
     pop();
   }
 }
