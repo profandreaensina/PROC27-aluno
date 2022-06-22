@@ -10,7 +10,7 @@ var boats = [];
 
 var score = 0;
 
-//01. criar 3 matrizes necessárias para a nimação
+//01. criar 3 matrizes necessárias para a animação
 
 var brokenBoatAnimation = [];
 var brokenBoatSpritedata, brokenBoatSpritesheet;
@@ -49,6 +49,9 @@ function setup() {
   var boatFrames = boatSpritedata.frames;
   for (var i = 0; i < boatFrames.length; i++) {
     //03. percorrer matrizes e salvar cada frame da animação em uma nova matriz
+    
+    var img = boatSpritesheet.get(pos.x, pos.y, pos.w, pos.h);
+    boatAnimation.push(img);
   }
 
   var brokenBoatFrames = brokenBoatSpritedata.frames;
