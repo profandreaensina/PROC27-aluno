@@ -10,7 +10,7 @@ var boats = [];
 
 var score = 0;
 
-//01. criar 3 matrizes necessárias para a animação
+//01. criar matriz e variáveis necessárias para a animação
 
 var brokenBoatAnimation = [];
 var brokenBoatSpritedata, brokenBoatSpritesheet;
